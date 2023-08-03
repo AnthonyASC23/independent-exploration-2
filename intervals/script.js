@@ -1,5 +1,10 @@
-// number of seconds that have passed
 let time = 0;
-// reference to the <span> containing the number
 let counterElement = document.getElementById("time");
 
+function updateTimer() {
+  time++;
+  counterElement.textContent = time;
+}
+
+// Call updateTimer() every 1000 milliseconds (1 second)
+setInterval(updateTimer, 1000);
